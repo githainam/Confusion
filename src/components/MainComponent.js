@@ -11,6 +11,7 @@ import { Switch, Route, Redirect, Routes, Navigate, useParams } from "react-rout
 import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions';
 import { LEADERS } from '../shared/leaders';
+import Login from "./Login";
 
 
 class Main extends Component {
@@ -58,8 +59,9 @@ class Main extends Component {
             path="/menu"
             Component={() => <Menu dishes={this.state.dishes} />}/>
           <Route path="/" element={< Navigate to="/home" />}/>
-          <Route exact path='/contactus' component={Contact} />
-          <Route path='/menu/:dishId' component={DishWithId} />
+          <Route exact path='/login' Component={Login} />
+          <Route exact path='/contactus' Component={Contact} />
+          <Route path='/menu/:dishId' Component={DishWithId} />
           </Routes>
 
         <DishDetail
