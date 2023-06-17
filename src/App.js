@@ -3,17 +3,19 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {Component} from 'react';
 import Main from './components/MainComponent';
+import { BrowserRouter } from 'react-router-dom';
 
-class App extends Component {
+function App() {
 
-  render() {
     return (
+      <BrowserRouter>
       <div className="App">
-      <Main />
+        <Main />
       </div>
+    </BrowserRouter>
     ); 
   }
-}
+
 
 
 export default App;
